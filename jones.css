@@ -1,7 +1,5 @@
 .video-wrapper {
-    /* width: 100vw; */
     position: relative;
-    /* display: inline-block; */
     overflow: hidden
 }
 
@@ -11,8 +9,7 @@
   }
 
   .video-description {
-  position: absolute;
-    /* width: 40%; */
+    position: absolute;
     left: 27%;
     top: 50%;
     -webkit-transform: translateY(-50%);
