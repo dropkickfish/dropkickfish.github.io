@@ -1,3 +1,7 @@
+#scroll-container{
+    height: 300vh;
+}
+
 #animation{
     height: 100vh;
     top: 0;
