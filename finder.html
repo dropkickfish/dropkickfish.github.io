@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finder</title>
+    <script src="https://unpkg.com/@frontify/frontify-finder@2.0.1/dist/index.js"></script>
+</head>
+<body>
+    <button id="open-finder-button" type="button">Open Finder</button>
+    <div id="finderModal" style="width: auto; height: 80vh;"></div>
+    <div id="output" style="width: auto; height: auto;"></div>
+</body>
+<script>
+    document
+        .getElementById('open-finder-button')
+        .addEventListener('click', async (event) => {
+            try{
+                const finder = await window.FrontifyFinder.create({
+                    // clientId: 'client-uhyvxo8kvuhugctv',
+                    clientId: 'client-sobf5oo87vaawpmx',
+                    options: {
+                        allowMultiSelect: true
+                    }
+                });
+                finder.onAssetsChosen((assets) => {
+                document
+                    .getElementById('output')
+                    .innerHTML = JSON.stringify(assets)
+                asset_copyright = assets[0].copyright
+                window.confirm('This asset has a ' + asset_copyright.status + 
+                            ' copyright status, with the following notice:\n' + 
+                            asset_copyright.notice + '\n\nDo you wish to continue?')
+                console.log(assets)
+            });
+            finder.mount(document.getElementById('finderModal'))
+            } catch (error) {
+                console.error(`Authenticator failed with code '${error.code}'`, error);
+            }
+        });
+   
+</script>
+</html>
+
