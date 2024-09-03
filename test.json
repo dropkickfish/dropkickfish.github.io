@@ -1,0 +1,27 @@
+[
+    {
+    "German metadata title": "Transport modus",
+    "German metadata options": {
+        "zug": {
+            "french": {
+                "metadata title": "mode to transport",
+                "metadata option title": "le train"
+            },
+            "italian": {
+                "metadata title": "modi di transporti",
+                "metadata option title": "el train si"
+            }
+        },
+        "bus": {
+            "french": {
+                "metadata title": "mode to transport",
+                "metadata option title": "french bus"
+            },
+            "italian": {
+                "metadata title": "modi di transporti",
+                "metadata option title": "italian bus"
+            }
+        }
+    }
+    }
+]
